@@ -1,0 +1,180 @@
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    padding: 3%;
+}
+
+.header{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.title{
+    font-family: "Open Sans";
+    font-size: 40px;
+}
+
+.subtitle{
+    font-family: "Open Sans";
+    font-size: 24px;
+    white-space: pre-line;
+    color: #000000;
+}
+
+.container{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+
+.container-menu{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  
+}
+
+.container-images{
+    width: 70%;
+    padding: 2%;
+}
+
+.img{
+    width: 100%;
+    height: 500px;
+    background-image: url("https://kissflow.com/wp-content/uploads/2021/02/work-from-home-pros-and-cons.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.menu-div{
+  width: 100%;
+  padding: 5%;
+  border-radius: 7px;
+}
+
+.menu-header{
+  margin: 3% 0;
+  font-size: 26px;
+}
+
+.menu-description{
+  margin: 3% 0;
+  font-size: 18px;
+  display: none;
+}
+
+.display{
+  display: block;
+}
+
+.display-color{
+  background-color: lightgrey;
+}
+
+@media only screen and (max-width: 998px){
+  .container-menu{
+    width: 100%;
+  }
+  .container-images{
+    display: none;
+  }
+  .little-image{
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; 
+  }
+  .menu-description{
+    display: block;
+  }
+  .menu-div{
+    background-color: lightgrey;
+  }
+}
+
+@media only screen and (max-width: 530px){
+    .title{
+      font-size: 24px;
+    }
+    .subtitle, .menu-description{
+        font-size: 12px;
+    }
+    .little-image{
+        height: 350px;
+    }
+    .menu-header{
+        font-size: 20px;
+    }
+}
+
+/* ---------- */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1;
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.9); 
+}
+
+.modal-img{
+  width: 90%;
+  height: 90%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Add Animation */
+.modal-img {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
